@@ -1,5 +1,5 @@
 def round_3sf(num):
-    if float(num)-int(num)==0:
+    if (num)-int(num)==0:
        num=abs(num)
        x=3-len(str(int(num)))
        rounded=round(int(num),x)
