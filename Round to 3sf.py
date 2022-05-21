@@ -1,4 +1,5 @@
 def round_3sf(num):
+    #Testing whether value is an integer or a float.
     if (num)-int(num)==0:
        num=abs(num)
        x=3-len(str(int(num)))
