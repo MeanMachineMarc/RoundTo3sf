@@ -1,4 +1,4 @@
-import Sign
+import sign
 
 def round_3sf(num):
     num2=float(num)
@@ -6,15 +6,15 @@ def round_3sf(num):
        decimalPlaces=3-len(str(int(num)))
        rounded=round(int(num),decimalPlaces)
        
-    elif int(num)>0: 
+    elif int(num)>0: #Float, >1
        num=abs(num)
        len_b4_dp=len(str(int(num)))
        len_aft_dp=len(str(num))-len_b4_dp-1
        decimalPlaces=4+len_aft_dp-len(str(num))
        rounded=round(num,decimalPlaces)
        
-    else:  
-       num1=num
+    else: #Negative float or float, <1
+       num1=num 
        num=abs(num)
        count=0
        while num<1:
