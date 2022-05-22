@@ -22,9 +22,4 @@ def round_3sf(num):
        x=2+count      
        rounded=round(num1,x)     
        return rounded
-#while True:
-    num=float(input("Enter number: "))
-    if num<0:
-       print(-1*round_3sf(num))
-    else:
-       print(round_3sf(num)) 
+
