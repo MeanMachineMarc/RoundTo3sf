@@ -1,5 +1,5 @@
-import RoundTo3sf
+import MachineLib
 
 while True:
     num=input("Enter number: ")
-    print(RoundTo3sf.round_3sf(num))
+    print(MachineLib.round_3sf(num))
