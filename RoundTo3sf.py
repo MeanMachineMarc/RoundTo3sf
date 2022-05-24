@@ -20,13 +20,13 @@ def round_3sf(num):
              count=count+1
              num=10*num    
        
-       if sign.sign(hold1)==-1 and hold2>1: #Negative Float
+       if sign.sign(hold1)==-1 and hold2>1: #Negative Float, abs>1
           len_b4_dp=len(str(int(num)))
           len_aft_dp=len(str(num))-len_b4_dp-1
           decimalPlaces=4+len_aft_dp-len(str(num))
           rounded=round(hold1,decimalPlaces)
      
-       else:           
+       else: #Float, abs<1
           decimalPlaces=2+count 
           rounded=round(hold1,decimalPlaces)    
 
