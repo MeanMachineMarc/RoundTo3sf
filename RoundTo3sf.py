@@ -1,6 +1,7 @@
 import sign
 
 def round_3sf(num):
+    num=float(num)
     if (num) - int(num) == 0: #Integer
        if sign.sign(num) == -1: #Negative Integer
           decimalPlaces = 4 - len(str(int(num)))
