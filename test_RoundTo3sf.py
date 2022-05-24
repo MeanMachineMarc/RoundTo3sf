@@ -1,10 +1,22 @@
 import pytest
 import RoundTo3sf
 
-def test_pos_integer1():
+def test_negative_frac1():
+    assert RoundTo3sf.round_3sf('-3254,12.2345') == -266
+
+def test_negative_frac2():
+    assert RoundTo3sf.round_3sf('0.034,-12') == -0.00283
+
+def test_positive_frac1():
+    assert RoundTo3sf.round_3sf('-3254,-12.2345') == 266
+
+def test_positive_frac2():
+    assert RoundTo3sf.round_3sf('0.034,12') == 0.00283
+
+def test_positive_integer1():
     assert RoundTo3sf.round_3sf(3) == 3
 
-def test_pos_integer2():
+def test_positive_integer2():
     assert RoundTo3sf.round_3sf(3336) == 3340
 
 def test_negative_integer1():

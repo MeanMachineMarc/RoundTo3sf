@@ -1,7 +1,17 @@
 import sign
+import FracToDec
 
 def round_3sf(num):
+    
+    if ',' in str(num): #Fraction
+      frac_list = str(num).split(',') 
+      num = FracToDec.frac_to_dec(frac_list[0],frac_list[1])
+    
+    else:
+      pass
+
     num=float(num)
+    
     if (num) - int(num) == 0: #Integer
        if sign.sign(num) == -1: #Negative Integer
           decimalPlaces = 4 - len(str(int(num)))
