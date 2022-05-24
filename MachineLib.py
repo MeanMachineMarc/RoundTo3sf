@@ -23,7 +23,7 @@ def round_3sf(num):
     num=float(num)
     
     if (num) - int(num) == 0: #Integer
-       if sign.sign(num) == -1: #Negative Integer
+       if sign(num) == -1: #Negative Integer
           decimalPlaces = 4 - len(str(int(num)))
        
        else: #Zero or Positive Integer
@@ -46,7 +46,7 @@ def round_3sf(num):
              count = count + 1
              num = 10 * num    
        
-       if sign.sign(hold1) == -1 and hold2 > 1: #Negative Float, abs > 1
+       if sign(hold1) == -1 and hold2 > 1: #Negative Float, abs > 1
           len_b4_dp = len(str(int(num)))
           len_aft_dp = len(str(num)) - len_b4_dp - 1
           decimalPlaces = 4 + len_aft_dp - len(str(num))

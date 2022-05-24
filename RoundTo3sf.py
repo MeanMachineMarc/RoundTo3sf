@@ -1,11 +1,10 @@
-import sign
-import FracToDec
+import MachineLib
 
 def round_3sf(num):
     
     if ',' in str(num): #Fraction
       frac_list = str(num).split(',') 
-      num = FracToDec.frac_to_dec(frac_list[0],frac_list[1])
+      num = MachineLib.frac_to_dec(frac_list[0],frac_list[1])
     
     else:
       pass
@@ -13,7 +12,7 @@ def round_3sf(num):
     num=float(num)
     
     if (num) - int(num) == 0: #Integer
-       if sign.sign(num) == -1: #Negative Integer
+       if MachineLib.sign(num) == -1: #Negative Integer
           decimalPlaces = 4 - len(str(int(num)))
        
        else: #Zero or Positive Integer
@@ -36,7 +35,7 @@ def round_3sf(num):
              count = count + 1
              num = 10 * num    
        
-       if sign.sign(hold1) == -1 and hold2 > 1: #Negative Float, abs > 1
+       if MachineLib.sign(hold1) == -1 and hold2 > 1: #Negative Float, abs > 1
           len_b4_dp = len(str(int(num)))
           len_aft_dp = len(str(num)) - len_b4_dp - 1
           decimalPlaces = 4 + len_aft_dp - len(str(num))
