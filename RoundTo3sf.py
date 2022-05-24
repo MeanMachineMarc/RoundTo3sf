@@ -2,8 +2,13 @@ import sign
 
 def round_3sf(num):
     if (num) - int(num) == 0: #Integer
-       decimalPlaces= 3 - len(str(int(num)))
-       rounded = round(int(num),decimalPlaces)
+       if sign.sign(num) == -1: #Negative Integer
+          decimalPlaces = 4 - len(str(int(num)))
+       
+       else: #Zero or Positive Integer
+          decimalPlaces = 3 - len(str(int(num)))
+          
+       rounded = round(num,decimalPlaces)
        
     elif int(num) > 0: #Float, > 1
        len_b4_dp = len(str(int(num)))
